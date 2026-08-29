@@ -166,7 +166,7 @@ footer{text-align:center;padding:2rem 0 0;color:var(--ink-faint);font-size:12px;
 
 .page-link{background:var(--surface);border:0.5px solid var(--line);color:var(--ink-soft);font-weight:600;font-size:13px;padding:8px 12px;border-radius:var(--radius-sm);cursor:pointer;}
 .page-link:hover{background:var(--surface-soft);border-color:var(--orange);color:var(--orange-dark);}
-.back-link{position:sticky;top:10px;z-index:20;display:inline-flex;align-items:center;gap:5px;margin-bottom:0.6rem;box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.back-link{display:inline-flex;align-items:center;gap:5px;margin-bottom:0.6rem;}
 .back-link::before{content:'←';font-size:13px;}
 .accent-link{background:var(--orange-tint);border-color:var(--orange);color:var(--orange-dark);margin-bottom:0.6rem;}
 .accent-link:hover{background:var(--orange);color:#fff;}
@@ -1150,7 +1150,7 @@ document.querySelectorAll('[data-dayset]').forEach(btn => {
   });
 });
 
-document.getElementById('totalHoursInput').addEventListener('input', (e) => {
+document.getElementById('totalHoursInput').addEventListener('change', (e) => {
   const val = parseFloat(e.target.value);
   data.hours.total = val > 0 ? val : 0;
   save();
